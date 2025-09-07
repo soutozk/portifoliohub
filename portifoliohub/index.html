@@ -7,30 +7,13 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="/assets/css/landing.css" />
-    <link rel="stylesheet" href="/assets/css/scroll.css" />
-    <link rel="stylesheet" href="/assets/css/footer.css" />
-    <link rel="stylesheet" href="/assets/css/sidebar.css" />
+      rel="stylesheet" />
+    <link rel="stylesheet" href="/portifoliohub/assets/css/landing.css" />
+    <link rel="stylesheet" href="/portifoliohub/assets/css/scroll.css" />
+    <link rel="stylesheet" href="/portifoliohub/assets/css/footer.css" />
+    <link rel="stylesheet" href="/portifoliohub/assets/css/sidebar.css" />
   </head>
   <body>
-    <header>
-      <button id="toggle-btn">
-        <i class="fas fa-bars"></i>
-      </button>
-      <h1 class="title-header">Gabriel Souto</h1>
-    </header>
-    <div id="sidebar" class="sidebar">
-      <button id="close-btn"><i class="fas fa-times"></i></button>
-      <nav>
-        <ul>
-          <li><a href="#inicio">Início</a></li>
-          <li><a href="#projetos">Projetos</a></li>
-          <li><a href="#contato">Contato</a></li>
-        </ul>
-      </nav>
-    </div>
     <div class="start-animation">
       <svg viewBox="0 0 500 100">
         <text x="50%" y="50%" text-anchor="middle" dy=".35em" font-size="70">
@@ -45,22 +28,26 @@
           <h1>Olá, me chamo <span> Gabriel Souto</span></h1>
           <br />
           <p>
-            Tenho experiência prática com as principais tecnologias de
-            desenvolvimento web, incluindo HTML5, CSS3, JavaScript, Angular, React, Vite,
-            Next.js, Node.js, Figma, Git e GitHub. Gosto de desenvolver
-            interfaces eficientes e funcionais, sempre focando em organização,
-            qualidade e desempenho. Busco aprimorar minhas habilidades
-            constantemente e acompanhar as tendências do setor para criar
-            soluções modernas e bem estruturadas.
-            <br /><br />
-            Sou estudante de <span>Ciência da Computação pela Universidade Católica de
-            Brasília</span> e me aprofundo em cursos e estudos na área para expandir
-            meu conhecimento e aprimorar minhas habilidades.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil,
+            maxime. Architecto rerum quos rem iure, voluptatem odio vitae sit
+            explicabo nulla facere distinctio natus ab optio ea? Tenetur, in
+            error!
+
+            <span
+              >Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Provident, reprehenderit itaque! Eum architecto esse quidem
+              laboriosam quasi eveniet, animi incidunt id quisquam quaerat
+              doloremque dicta. Nobis quas adipisci dolorem incidunt.</span
+            >
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati,
+            quaerat illum nisi laudantium perspiciatis enim dolorum deleniti
+            labore tenetur, doloremque, dolores error nam! Mollitia enim sint
+            consectetur dolore ipsa ratione?
           </p>
         </div>
 
         <div class="image-top-home">
-          <img src="/assets/img/astronautablue.png" alt="" />
+          <img src="foto" alt="" />
         </div>
       </div>
 
@@ -82,12 +69,30 @@
 
       <div class="container-projects" id="projetos">
         <div class="projects-title">
-          <h1>Projetos</h1>
+          <h1>Meus Desenvolvimentos</h1>
+        </div>
+
+        <div class="container-button">
+          <div class="tab-container">
+            <input type="radio" name="tab" id="tab1" class="tab tab--1" />
+            <label class="tab_label" for="tab1">Todos</label>
+
+            <input type="radio" name="tab" id="tab2" class="tab tab--2" />
+            <label class="tab_label" for="tab2">Sistemas</label>
+
+            <input type="radio" name="tab" id="tab3" class="tab tab--3" />
+            <label class="tab_label" for="tab3">Links Bios</label>
+            <input type="radio" name="tab" id="tab4" class="tab tab--4" />
+            <label class="tab_label" for="tab4">Proprios</label>
+            <div class="indicator"></div>
+          </div>
         </div>
         <div class="projects-grid">
           <!-- Card 1 -->
           <div class="card">
-            <img src="/assets/img/biblia.png" alt="Imagem do Projeto" />
+            <img
+              src="/portifoliohub/assets/img/biblia.png"
+              alt="Imagem do Projeto" />
             <h2>Bíblia Virtual</h2>
             <div class="card-buttons">
               <button onclick="openModal('1')">Detalhes</button>
@@ -98,40 +103,93 @@
           </div>
           <!-- Card 2 -->
           <div class="card">
-            <img src="/assets/img/asstj.png" alt="Imagem do Projeto" />
-            <h2>Site Institucional - ASSTJ (Colaboração)</h2>
+            <img
+              src="/portifoliohub/assets/img/asstj.png"
+              alt="Imagem do Projeto" />
+            <h2>Site Institucional - ASSTJ</h2>
             <div class="card-buttons">
               <button onclick="openModal('2')">Detalhes</button>
-              <a href="https://asstj.netlify.app/"
-                ><button>Visualizar</button></a
-              >
+              <a href="https://www.asstj.org.br"><button>Visualizar</button></a>
             </div>
           </div>
           <!-- Card 3 -->
           <div class="card">
-            <img src="/assets/img/gestao.png" alt="Imagem do Projeto" />
-            <h2>Sistema de Gestão - Em Desenvolvimento</h2>
+            <img src="/portifoliohub/assets/img/" alt="Imagem do Projeto" />
+            <h2>E-commerce Dominus Tech</h2>
             <div class="card-buttons">
               <button onclick="openModal('3')">Detalhes</button>
-              <a href="https://sistema-auto-escola-uy6r.vercel.app/"
+              <a href="https://www.dominustech.shop"
+                ><button>Visualizar</button></a
+              >
+            </div>
+          </div>
+
+          <!-- Faculdade-Cerrado 1 -->
+          <div class="card">
+            <span class="estagio">Estagio</span>
+            <img src="/portifoliohub/assets/img/" alt="Imagem do Projeto" />
+            <h2>Gestão de Patrimonio</h2>
+            <div class="card-buttons">
+              <button onclick="openModal('3')">Detalhes</button>
+              <a href="https://www.dominustech.shop"
+                ><button>Visualizar</button></a
+              >
+            </div>
+          </div>
+          <!-- Faculdade-Cerrado 2-->
+          <div class="card">
+            <span class="estagio">Estagio</span>
+            <img src="/portifoliohub/assets/img/" alt="Imagem do Projeto" />
+            <h2>Gestão de Atendimento</h2>
+            <div class="card-buttons">
+              <button onclick="openModal('3')">Detalhes</button>
+              <a href="https://www.dominustech.shop"
+                ><button>Visualizar</button></a
+              >
+            </div>
+          </div>
+          <!-- Faculdade-Cerrado 3 -->
+          <div class="card">
+            <span class="estagio">Estagio</span>
+            <img src="/portifoliohub/assets/img/" alt="Imagem do Projeto" />
+            <h2>Cardapio Digital</h2>
+            <div class="card-buttons">
+              <button onclick="openModal('3')">Detalhes</button>
+              <a href="https://cerradinho.vercel.app/"
+                ><button>Visualizar</button></a
+              >
+            </div>
+          </div>
+          <!-- Card 5 -->
+          <div class="card">
+            <img
+              src="/portifoliohub/assets/img/flygen.png"
+              alt="Imagem do Projeto" />
+            <h2>Tela de login</h2>
+            <div class="card-buttons">
+              <button onclick="openModal('5')">Detalhes</button>
+              <a href="https://flyergen.netlify.app/mercado-templete"
                 ><button>Visualizar</button></a
               >
             </div>
           </div>
           <!-- Card 4 -->
-          <!-- <div class="card">
+          <div class="card">
             <img src="#" alt="Imagem do Projeto" />
-            <h2>Secret Word Game</h2>
+            <h2>Mp Telecom</h2>
             <div class="card-buttons">
               <button onclick="openModal('4')">Detalhes</button>
               <a href="https://bibliavirtual.netlify.app" target="_blank">
                 <button>Visualizar</button>
               </a>
             </div>
-          </div> -->
+          </div>
+
           <!-- Card 5 -->
           <div class="card">
-            <img src="/assets/img/flygen.png" alt="Imagem do Projeto" />
+            <img
+              src="/portifoliohub/assets/img/flygen.png"
+              alt="Imagem do Projeto" />
             <h2>Gerador de Panfleto (Colaboração)</h2>
             <div class="card-buttons">
               <button onclick="openModal('5')">Detalhes</button>
@@ -143,9 +201,8 @@
           <!-- Card 6 -->
           <div class="card">
             <img
-              src="/assets/img/faculdadeelohim.png"
-              alt="Imagem do Projeto"
-            />
+              src="/portifoliohub/assets/img/faculdadeelohim.png"
+              alt="Imagem do Projeto" />
             <h2>Site Institucional - Faculdade Elohin</h2>
             <div class="card-buttons">
               <button onclick="openModal('6')">Detalhes</button>
@@ -156,7 +213,9 @@
           </div>
           <!-- Card 7 -->
           <div class="card">
-            <img src="/assets/img/paintbiblia.png" alt="Imagem do Projeto" />
+            <img
+              src="/portifoliohub/assets/img/paintbiblia.png"
+              alt="Imagem do Projeto" />
             <h2>Paint Biblia Kids</h2>
             <div class="card-buttons">
               <button onclick="openModal('7')">Detalhes</button>
@@ -169,7 +228,9 @@
 
           <!-- Card 8 -->
           <div class="card">
-            <img src="/assets/img/gamememory.png" alt="Imagem do Projeto" />
+            <img
+              src="/portifoliohub/assets/img/gamememory.png"
+              alt="Imagem do Projeto" />
             <h2>Jogo da Memoria</h2>
             <div class="card-buttons">
               <button onclick="openModal('8')">Detalhes</button>
@@ -180,7 +241,7 @@
           </div>
           <!-- Card 9 -->
           <!-- <div class="card">
-            <img src="/assets/img/link.png" alt="Imagem do Projeto" />
+            <img src="/portifoliohub/assets/img/link.png" alt="Imagem do Projeto" />
             <h2>Alguns Links Bios</h2>
             <div class="card-buttons">
            <button onclick="openModal('6')">Detalhes</button
@@ -237,7 +298,7 @@
             </ul>
 
             <!-- Outras formas de contato -->
-            <h3>Outras formas de contato</h3>
+            <span>Outras formas de contato</span>
             <ul class="social-links">
               <li>
                 <a href="https://wa.me/5561998385246" target="_blank">
@@ -252,8 +313,7 @@
               <li>
                 <a
                   href="https://www.linkedin.com/in/gabrielsouto01"
-                  target="_blank"
-                >
+                  target="_blank">
                   <i class="fab fa-linkedin"></i> LinkedIn
                 </a>
               </li>
@@ -288,10 +348,10 @@
       </section>
     </main>
 
-    <script src="/assets/js/animate.js"></script>
-    <script src="/assets/js/carrosel.js"></script>
-    <script src="/assets/js/modal-project.js"></script>
-    <script src="/assets/js/modal-contact.js"></script>
-    <script src="/assets/js/sidebar.js"></script>
+    <script src="/portifoliohub/assets/js/animate.js"></script>
+    <script src="/portifoliohub/assets/js/carrosel.js"></script>
+    <script src="/portifoliohub/assets/js/modal-project.js"></script>
+    <script src="/portifoliohub/assets/js/modal-contact.js"></script>
+    <script src="/portifoliohub/assets/js/sidebar.js"></script>
   </body>
 </html>
