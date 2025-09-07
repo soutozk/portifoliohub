@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gabriel Souto</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/assets/css/pagelinks.css" />
+    <link rel="stylesheet" href="/assets/css/scroll.css" />
+    <link rel="stylesheet" href="/assets/css/sidebar.css">
+  </head>
+  <body>
+    <header>
+      <button id="toggle-btn">
+        <i class="fas fa-bars"></i>
+      </button>
+      <!-- <h1 class="title-header">Gabriel Souto</h1> -->
+    </header>
+    <div id="sidebar" class="sidebar">
+      <button id="close-btn"><i class="fas fa-times"></i></button>
+      <nav>
+        <ul>
+          <li><a href="/index.html#inicio">Início</a></li>
+          <li><a href="/index.html#projetos">Projetos</a></li>
+          <li><a href="/index.html#contato">Contato</a></li>
+        </ul>
+      </nav>
+    </div>    
+      <div class="container-projects">
+        <div class="projects-title">
+          <h1>Links Bio</h1>
+        </div>
+        <div class="projects-grid">
+          <!-- Card 1 -->
+          <div class="card">
+            <img src="/assets/img/faculdadecerra.png" alt="Imagem do Projeto" />
+            <h2>Faculdade Cerrado</h2>
+            <div class="card-buttons">
+              <!-- <button onclick="openModal('1L')">Detalhes</button> -->
+              <a href="https://faculdadecerrado.netlify.app" target="_blank">
+                <button>Visualizar</button>
+              </a>
+            </div>
+          </div>
+          <!-- Card 2 -->
+          <div class="card">
+            <img src="/assets/img/amineira.png" alt="Imagem do Projeto" />
+            <h2>A Mineira</h2>
+            <div class="card-buttons">
+              <!-- <button onclick="openModal('2L')">Detalhes</button> -->
+              <a href="https://amineira.netlify.app"
+                ><button>Visualizar</button></a
+              >
+            </div>
+          </div>
+          <!-- Card 3 -->
+          <div class="card">
+            <img
+              src="/assets/img/tapioca.png"
+              alt="Imagem do Projeto"
+            />
+            <h2>Tapioca Massa Real - Em Desenvolvimento</h2>
+            <div class="card-buttons">
+              <!-- <button onclick="openModal('3L')">Detalhes</button> -->
+              <a href="https://tapiocamassareaal.netlifyapp"><button>Visualizar</button></a>
+            </div>
+          </div>
+           <!-- Card 4 -->
+           <!-- <div class="card">
+            <img src="#" alt="Imagem do Projeto" />
+            <h2></h2>
+            <div class="card-buttons">
+              <button onclick="openModal('4L')">Detalhes</button> -->
+              <!-- <a href="https://bibliavirtual.netlify.app" target="_blank">
+                <button>Visualizar</button>
+              </a>
+            </div>
+          </div> -->
+          <!-- Card 5 -->
+          <!-- <div class="card">
+            <img src="#" alt="Imagem do Projeto" />
+            <h2></h2>
+            <div class="card-buttons">
+              <button onclick="openModal('5L')">Detalhes</button>
+              <a href="https://flyergen.netlify.app/mercado-templete"
+                ><button>Visualizar</button></a
+              >
+            </div>
+          </div> -->
+          <!-- Card 6 -->
+          <!-- <div class="card">
+            <img
+              src="https://via.placeholder.com/150"
+              alt="Imagem do Projeto"
+            />
+            <h2></h2>
+            <div class="card-buttons">
+              <button onclick="openModal('6L')">Detalhes</button>
+              <a href="https://faculdadeelohin.netlify.app/"
+                ><button>Visualizar</button></a
+              >
+            </div>
+          </div> -->
+        </div>
+        <div id="modal" class="modal">
+          <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img id="modal-image" src="" alt="Imagem do Projeto" />
+            <h2 id="modal-title"></h2>
+            <p id="modal-description"></p>
+            <div id="modal-techs" class="tech-icons"></div>
+            <div class="modal-links">
+              <a id="modal-deploy" href="#" target="_blank">💻 Visualizar</a>
+              <a id="modal-github" href="#" target="_blank">🔗 GitHub</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="container-footer"></div>
+    </footer>
+    <script src="/assets/js/animate.js"></script>
+    <script src="/assets/js/carrosel.js"></script>
+    <script src="/assets/js/modal-project.js"></script>
+    <script src="/assets/js/modal-contact.js"></script>
+    <script src="/assets/js/sidebar.js"></script>
+  </body>
+</html>

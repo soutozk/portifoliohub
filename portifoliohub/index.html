@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gabriel Souto</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/assets/css/landing.css" />
+    <link rel="stylesheet" href="/assets/css/scroll.css" />
+    <link rel="stylesheet" href="/assets/css/footer.css" />
+    <link rel="stylesheet" href="/assets/css/sidebar.css" />
+  </head>
+  <body>
+    <header>
+      <button id="toggle-btn">
+        <i class="fas fa-bars"></i>
+      </button>
+      <h1 class="title-header">Gabriel Souto</h1>
+    </header>
+    <div id="sidebar" class="sidebar">
+      <button id="close-btn"><i class="fas fa-times"></i></button>
+      <nav>
+        <ul>
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="#projetos">Projetos</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="start-animation">
+      <svg viewBox="0 0 500 100">
+        <text x="50%" y="50%" text-anchor="middle" dy=".35em" font-size="70">
+          Gabriel Souto
+        </text>
+      </svg>
+    </div>
+    <header></header>
+    <main class="container-home" id="inicio">
+      <div class="container-top animated animatedFadeInUp fadeInUp">
+        <div class="text-home-top">
+          <h1>Olá, me chamo <span> Gabriel Souto</span></h1>
+          <br />
+          <p>
+            Tenho experiência prática com as principais tecnologias de
+            desenvolvimento web, incluindo HTML5, CSS3, JavaScript, Angular, React, Vite,
+            Next.js, Node.js, Figma, Git e GitHub. Gosto de desenvolver
+            interfaces eficientes e funcionais, sempre focando em organização,
+            qualidade e desempenho. Busco aprimorar minhas habilidades
+            constantemente e acompanhar as tendências do setor para criar
+            soluções modernas e bem estruturadas.
+            <br /><br />
+            Sou estudante de <span>Ciência da Computação pela Universidade Católica de
+            Brasília</span> e me aprofundo em cursos e estudos na área para expandir
+            meu conhecimento e aprimorar minhas habilidades.
+          </p>
+        </div>
+
+        <div class="image-top-home">
+          <img src="/assets/img/astronautablue.png" alt="" />
+        </div>
+      </div>
+
+      <div class="carroseul-icons">
+        <div class="icon">
+          <i class="fab fa-figma"></i>
+          <i class="fab fa-wix"></i>
+          <i class="fab fa-github"></i>
+          <i class="fab fa-git"></i>
+          <i class="fab fa-node"></i>
+          <i class="fab fa-react"></i>
+          <i class="fab fa-js"></i>
+          <i class="fab fa-bootstrap"></i>
+          <i class="fab fa-sass"></i>
+          <i class="fab fa-css3-alt"></i>
+          <i class="fab fa-html5"></i>
+        </div>
+      </div>
+
+      <div class="container-projects" id="projetos">
+        <div class="projects-title">
+          <h1>Projetos</h1>
+        </div>
+        <div class="projects-grid">
+          <!-- Card 1 -->
+          <div class="card">
+            <img src="/assets/img/biblia.png" alt="Imagem do Projeto" />
+            <h2>Bíblia Virtual</h2>
+            <div class="card-buttons">
+              <button onclick="openModal('1')">Detalhes</button>
+              <a href="https://bibliavirtual.netlify.app" target="_blank">
+                <button>Visualizar</button>
+              </a>
+            </div>
+          </div>
+          <!-- Card 2 -->
+          <div class="card">
+            <img src="/assets/img/asstj.png" alt="Imagem do Projeto" />
+            <h2>Site Institucional - ASSTJ (Colaboração)</h2>
+            <div class="card-buttons">
+              <button onclick="openModal('2')">Detalhes</button>
+              <a href="https://asstj.netlify.app/"
+                ><button>Visualizar</button></a
+              >
+            </div>
+          </div>
+          <!-- Card 3 -->
+          <div class="card">
+            <img src="/assets/img/gestao.png" alt="Imagem do Projeto" />
+            <h2>Sistema de Gestão - Em Desenvolvimento</h2>
+            <div class="card-buttons">
+              <button onclick="openModal('3')">Detalhes</button>
+              <a href="https://sistema-auto-escola-uy6r.vercel.app/"
+                ><button>Visualizar</button></a
+              >
+            </div>
+          </div>
+          <!-- Card 4 -->
+          <!-- <div class="card">
+            <img src="#" alt="Imagem do Projeto" />
+            <h2>Secret Word Game</h2>
+            <div class="card-buttons">
+              <button onclick="openModal('4')">Detalhes</button>
+              <a href="https://bibliavirtual.netlify.app" target="_blank">
+                <button>Visualizar</button>
+              </a>
+            </div>
+          </div> -->
+          <!-- Card 5 -->
+          <div class="card">
+            <img src="/assets/img/flygen.png" alt="Imagem do Projeto" />
+            <h2>Gerador de Panfleto (Colaboração)</h2>
+            <div class="card-buttons">
+              <button onclick="openModal('5')">Detalhes</button>
+              <a href="https://flyergen.netlify.app/mercado-templete"
+                ><button>Visualizar</button></a
+              >
+            </div>
+          </div>
+          <!-- Card 6 -->
+          <div class="card">
+            <img
+              src="/assets/img/faculdadeelohim.png"
+              alt="Imagem do Projeto"
+            />
+            <h2>Site Institucional - Faculdade Elohin</h2>
+            <div class="card-buttons">
+              <button onclick="openModal('6')">Detalhes</button>
+              <a href="https://faculdadeelohin.netlify.app/"
+                ><button>Visualizar</button></a
+              >
+            </div>
+          </div>
+          <!-- Card 7 -->
+          <div class="card">
+            <img src="/assets/img/paintbiblia.png" alt="Imagem do Projeto" />
+            <h2>Paint Biblia Kids</h2>
+            <div class="card-buttons">
+              <button onclick="openModal('7')">Detalhes</button>
+              <a
+                href="https://bibliavirtual.netlify.app/recursosparacrian%C3%A7as/paint.html"
+                ><button>Visualizar</button></a
+              >
+            </div>
+          </div>
+
+          <!-- Card 8 -->
+          <div class="card">
+            <img src="/assets/img/gamememory.png" alt="Imagem do Projeto" />
+            <h2>Jogo da Memoria</h2>
+            <div class="card-buttons">
+              <button onclick="openModal('8')">Detalhes</button>
+              <a href="https://memorygame321.netlify.app/"
+                ><button>Visualizar</button></a
+              >
+            </div>
+          </div>
+          <!-- Card 9 -->
+          <!-- <div class="card">
+            <img src="/assets/img/link.png" alt="Imagem do Projeto" />
+            <h2>Alguns Links Bios</h2>
+            <div class="card-buttons">
+           <button onclick="openModal('6')">Detalhes</button
+              <a href="/linkstree.html"><button>Visitar</button></a>
+            </div>
+          </div> -->
+        </div>
+        <div id="modal" class="modal">
+          <div id="modal-content" class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img id="modal-image" src="" alt="Imagem do Projeto" />
+            <h2 id="modal-title"></h2>
+            <p id="modal-description"></p>
+            <div id="modal-techs" class="tech-icons"></div>
+            <div class="modal-links">
+              <a id="modal-deploy" href="#" target="_blank">💻 Visualizar</a>
+              <!-- <a id="modal-github" href="#" target="_blank">🔗 GitHub</a> -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <section class="contact-section" id="contato">
+        <div class="container">
+          <!-- Serviços oferecidos à esquerda -->
+          <div class="services-text">
+            <h2>Serviços Oferecidos</h2>
+            <ul>
+              <li>
+                <i class="fas fa-laptop-code"></i> Desenvolvimento de websites
+                responsivos
+              </li>
+              <li><i class="fas fa-tools"></i> Suporte Tecnico</li>
+              <li><i class="fas fa-clipboard-check"> </i>Designer Unico</li>
+            </ul>
+          </div>
+
+          <!-- Formas de contato à direita -->
+          <div class="contact-info">
+            <h2>Entre em Contato</h2>
+            <ul>
+              <li>
+                <i class="fas fa-envelope"></i> joaogabrielsouto0@gmail.com
+              </li>
+              <li><i class="fas fa-phone"></i> +55 (61) 99838-5246</li>
+              <!-- <li>
+                <i
+                  class="fas fa-comments"
+                  id="open-modal"
+                  style="cursor: pointer"
+                ></i>
+                <p style="cursor: pointer">Formulario</p>
+              </li> -->
+            </ul>
+
+            <!-- Outras formas de contato -->
+            <h3>Outras formas de contato</h3>
+            <ul class="social-links">
+              <li>
+                <a href="https://wa.me/5561998385246" target="_blank">
+                  <i class="fab fa-whatsapp"></i> WhatsApp
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/soutozk" target="_blank">
+                  <i class="fab fa-github"></i> GitHub
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.linkedin.com/in/gabrielsouto01"
+                  target="_blank"
+                >
+                  <i class="fab fa-linkedin"></i> LinkedIn
+                </a>
+              </li>
+              <li>
+                <a href="https://instagram.com/soutozk" target="_blank">
+                  <i class="fab fa-instagram"></i> Instagram
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Modal -->
+        <div id="contact-modal" class="modal">
+          <div class="modal-content">
+            <span id="close-modal" class="close">&times;</span>
+            <h2>Formulário de Contato</h2>
+            <form>
+              <label for="name">Nome</label>
+              <input type="text" id="name" placeholder="Seu nome" />
+
+              <label for="email">E-mail</label>
+              <input type="email" id="email" placeholder="Seu e-mail" />
+
+              <label for="message">Mensagem</label>
+              <textarea id="message" placeholder="Sua mensagem"></textarea>
+
+              <button type="submit">Enviar</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="/assets/js/animate.js"></script>
+    <script src="/assets/js/carrosel.js"></script>
+    <script src="/assets/js/modal-project.js"></script>
+    <script src="/assets/js/modal-contact.js"></script>
+    <script src="/assets/js/sidebar.js"></script>
+  </body>
+</html>
