@@ -513,6 +513,32 @@ header {
   color: #fff;
 }
 
+.carousel-container {
+  position: relative;
+  width: 100%;
+  height: 110px;
+  overflow: hidden;
+  background-color: #242857;
+  align-content: center;
+}
+
+.carousel-track {
+  display: flex;
+  animation: scroll 50s linear infinite;
+}
+
+.carousel-item {
+  flex: 0 0 100px; /* Largura fixa das caixas */
+  height: 100px;
+  margin-right: 10px;
+  border-radius: 5px;
+  padding: 5px;
+  align-content: center;
+}
+.carousel-item img {
+  width: 100%;
+}
+
 @media (max-width: 768px) {
   body {
     overflow-x: hidden;
