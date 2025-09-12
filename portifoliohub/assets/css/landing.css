@@ -125,7 +125,6 @@ main {
   justify-content: center;
   flex-direction: column;
   background-color: #111111;
-  margin-bottom: 15vh;
 }
 
 .projects-title {
@@ -142,12 +141,21 @@ main {
   color: #707070;
 }
 
+/* .projects-body {
+  width: 100%;
+  padding: 2% 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+} */
+
 .projects-grid {
   display: grid;
   align-items: center;
   justify-content: center;
   grid-template-columns: repeat(3, 1fr);
-  gap: 3%;
+  padding-bottom: 1%;
 }
 
 .card {
@@ -504,9 +512,6 @@ header {
   color: #fff;
 }
 
-/* Media Queries para responsividade */
-
-/* Para telas menores que 768px (por exemplo, tablets) */
 @media (max-width: 768px) {
   body {
     overflow-x: hidden;
