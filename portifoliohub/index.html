@@ -81,7 +81,7 @@
             <label class="tab_label" for="tab2">Sistemas</label>
 
             <input type="radio" name="tab" id="tab3" class="tab tab--3" />
-            <label class="tab_label" for="tab3">Links Bios</label>
+            <label class="tab_label" for="tab3">Landing Page</label>
             <input type="radio" name="tab" id="tab4" class="tab tab--4" />
             <label class="tab_label" for="tab4">Proprios</label>
             <div class="indicator"></div>
@@ -89,7 +89,7 @@
         </div>
         <div class="projects-grid">
           <!-- Card 1 -->
-          <div class="card">
+          <div class="card" data-category="proprios">
             <img
               src="/portifoliohub/assets/img/biblia.png"
               alt="Imagem do Projeto" />
@@ -102,7 +102,7 @@
             </div>
           </div>
           <!-- Card 2 -->
-          <div class="card">
+          <div class="card" data-category="landingpage">
             <img
               src="/portifoliohub/assets/img/asstj.png"
               alt="Imagem do Projeto" />
@@ -113,8 +113,10 @@
             </div>
           </div>
           <!-- Card 3 -->
-          <div class="card">
-            <img src="/portifoliohub/assets/img/" alt="Imagem do Projeto" />
+          <div class="card" data-category="sistemas">
+            <img
+              src="/portifoliohub/assets/img/dominus.png"
+              alt="Imagem do Projeto" />
             <h2>E-commerce Dominus Tech</h2>
             <div class="card-buttons">
               <button onclick="openModal('3')">Detalhes</button>
@@ -125,10 +127,9 @@
           </div>
 
           <!-- Faculdade-Cerrado 1 -->
-          <div class="card">
-            <span class="estagio">Estagio</span>
+          <div class="card" data-category="sistemas">
             <img src="/portifoliohub/assets/img/" alt="Imagem do Projeto" />
-            <h2>Gestão de Patrimonio</h2>
+            <h2>Gestão Patrimonial</h2>
             <div class="card-buttons">
               <button onclick="openModal('3')">Detalhes</button>
               <a href="https://www.dominustech.shop"
@@ -137,10 +138,9 @@
             </div>
           </div>
           <!-- Faculdade-Cerrado 2-->
-          <div class="card">
-            <span class="estagio">Estagio</span>
+          <div class="card" data-category="sistemas">
             <img src="/portifoliohub/assets/img/" alt="Imagem do Projeto" />
-            <h2>Gestão de Atendimento</h2>
+            <h2>Sistema de Atendimento</h2>
             <div class="card-buttons">
               <button onclick="openModal('3')">Detalhes</button>
               <a href="https://www.dominustech.shop"
@@ -149,9 +149,10 @@
             </div>
           </div>
           <!-- Faculdade-Cerrado 3 -->
-          <div class="card">
-            <span class="estagio">Estagio</span>
-            <img src="/portifoliohub/assets/img/" alt="Imagem do Projeto" />
+          <div class="card" data-category="sistemas">
+            <img
+              src="/portifoliohub/assets/img/cerradinho.png"
+              alt="Imagem do Projeto" />
             <h2>Cardapio Digital</h2>
             <div class="card-buttons">
               <button onclick="openModal('3')">Detalhes</button>
@@ -161,7 +162,7 @@
             </div>
           </div>
           <!-- Card 5 -->
-          <div class="card">
+          <div class="card" data-category="sistemas">
             <img
               src="/portifoliohub/assets/img/flygen.png"
               alt="Imagem do Projeto" />
@@ -174,19 +175,21 @@
             </div>
           </div>
           <!-- Card 4 -->
-          <div class="card">
-            <img src="#" alt="Imagem do Projeto" />
+          <div class="card" data-category="landingpage">
+            <img
+              src="/portifoliohub/assets/img/mptelcom.png"
+              alt="Imagem do Projeto" />
             <h2>Mp Telecom</h2>
             <div class="card-buttons">
               <button onclick="openModal('4')">Detalhes</button>
-              <a href="https://bibliavirtual.netlify.app" target="_blank">
+              <a href="https://mptelecom.com.br/" target="_blank">
                 <button>Visualizar</button>
               </a>
             </div>
           </div>
 
           <!-- Card 5 -->
-          <div class="card">
+          <div class="card" data-category="sistemas">
             <img
               src="/portifoliohub/assets/img/flygen.png"
               alt="Imagem do Projeto" />
@@ -199,7 +202,7 @@
             </div>
           </div>
           <!-- Card 6 -->
-          <div class="card">
+          <!-- <div class="card">
             <img
               src="/portifoliohub/assets/img/faculdadeelohim.png"
               alt="Imagem do Projeto" />
@@ -209,10 +212,10 @@
               <a href="https://faculdadeelohin.netlify.app/"
                 ><button>Visualizar</button></a
               >
-            </div>
-          </div>
+            </div> 
+          </div> -->
           <!-- Card 7 -->
-          <div class="card">
+          <div class="card" data-category="proprios">
             <img
               src="/portifoliohub/assets/img/paintbiblia.png"
               alt="Imagem do Projeto" />
@@ -227,7 +230,7 @@
           </div>
 
           <!-- Card 8 -->
-          <div class="card">
+          <div class="card" data-category="proprios">
             <img
               src="/portifoliohub/assets/img/gamememory.png"
               alt="Imagem do Projeto" />
@@ -249,6 +252,7 @@
             </div>
           </div> -->
         </div>
+        <div class="pagination" id="pagination"></div>
         <div id="modal" class="modal">
           <div id="modal-content" class="modal-content">
             <span class="close" onclick="closeModal()">&times;</span>
@@ -353,5 +357,73 @@
     <script src="/portifoliohub/assets/js/modal-project.js"></script>
     <script src="/portifoliohub/assets/js/modal-contact.js"></script>
     <script src="/portifoliohub/assets/js/sidebar.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const tabs = document.querySelectorAll(".tab");
+        const cards = document.querySelectorAll(".card");
+        const pagination = document.getElementById("pagination");
+        const itemsPerPage = 9; // 3 linhas (3 cards cada = 9 cards)
+
+        let currentCategory = "all";
+        let currentPage = 1;
+
+        // Função para filtrar e paginar
+        function renderProjects() {
+          const visibleCards = Array.from(cards).filter((card) => {
+            const category = card.getAttribute("data-category");
+            if (currentCategory === "all") return true;
+            return category.includes(currentCategory);
+          });
+
+          cards.forEach((card) => (card.style.display = "none"));
+
+          const totalPages = Math.ceil(visibleCards.length / itemsPerPage);
+          const start = (currentPage - 1) * itemsPerPage;
+          const end = start + itemsPerPage;
+
+          visibleCards.slice(start, end).forEach((card) => {
+            card.style.display = "block";
+          });
+
+          renderPagination(totalPages);
+        }
+
+        function renderPagination(totalPages) {
+          pagination.innerHTML = "";
+
+          if (totalPages <= 1) return;
+
+          for (let i = 1; i <= totalPages; i++) {
+            const btn = document.createElement("button");
+            btn.textContent = i;
+            if (i === currentPage) btn.classList.add("active");
+
+            btn.addEventListener("click", () => {
+              currentPage = i;
+              renderProjects();
+            });
+
+            pagination.appendChild(btn);
+          }
+        }
+
+        tabs.forEach((tab) => {
+          tab.addEventListener("change", () => {
+            const id = tab.id;
+
+            if (id === "tab1") currentCategory = "all";
+            if (id === "tab2") currentCategory = "sistemas";
+            if (id === "tab3") currentCategory = "landingpage";
+            if (id === "tab4") currentCategory = "proprios";
+
+            currentPage = 1;
+            renderProjects();
+          });
+        });
+
+        document.getElementById("tab1").checked = true;
+        renderProjects();
+      });
+    </script>
   </body>
 </html>
