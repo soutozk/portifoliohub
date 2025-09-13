@@ -559,6 +559,7 @@ header {
   width: 100%;
   height: auto;
   padding: 1% 0;
+  margin-top: 2%;
   overflow: hidden;
   align-content: center;
 }
@@ -599,7 +600,7 @@ title-carousel h1 {
 
 .testimonials-section {
   position: relative;
-  padding: 4rem 2rem;
+  padding-top: 4rem;
 }
 
 .testimonials-section::before {
@@ -682,7 +683,7 @@ title-carousel h1 {
 
 .cv-card {
   background: rgba(0, 0, 0, 0.322);
-  border: 1px solid rgba(102, 102, 102, 0.5);
+  border: 1px solid #4a8ccf;
   transition: all 0.3s ease;
   padding: 25px;
   border-radius: 12px;
@@ -690,7 +691,6 @@ title-carousel h1 {
 }
 
 .cv-card:hover {
-  border-color: #4a8ccf;
   transform: translateY(-4px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
 }
@@ -908,4 +908,155 @@ title-carousel h1 {
     flex-direction: column;
     gap: 1.5rem;
   }
+}
+
+/* Seção Principal */
+.contact-section {
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #272727, #1d1d1d7c);
+  color: #f5f5f5;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* Container */
+.contact-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Título */
+.contact-title {
+  text-align: center;
+  font-size: 2.4rem;
+  font-weight: bold;
+  margin-bottom: 50px;
+  background: #ffffff;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Grid */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+}
+
+@media (min-width: 900px) {
+  .contact-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Box Glass */
+
+.contact-form {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 13px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+/* Texto intro */
+.info-header h3 {
+  font-size: 1.8rem;
+  margin-bottom: 8px;
+  color: #ffffff;
+}
+.info-header p {
+  font-size: 1rem;
+  color: #ccc;
+  line-height: 1;
+}
+
+/* Lista de informações */
+.info-list {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.info-icon {
+  width: 45px;
+  height: 45px;
+  background: rgba(79, 172, 254, 0.15);
+  color: #4a8ccf;
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+}
+.info-label {
+  font-weight: bold;
+  font-size: 1rem;
+}
+.info-value {
+  font-size: 0.95rem;
+  color: #aaa;
+}
+
+/* Formulário */
+.contact-form h3 {
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+  color: #4a8ccf;
+}
+.form-row {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+.form-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+.form-group label {
+  font-size: 0.9rem;
+  margin-bottom: 3px;
+  color: #ccc;
+}
+.form-group input,
+.form-group textarea {
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.05);
+  color: #f5f5f5;
+  font-size: 1rem;
+  transition: border 0.3s ease, background 0.3s ease;
+}
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #4facfe;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Botão */
+.btn-submit {
+  width: 100%;
+  padding: 14px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  background: linear-gradient(90deg, #00f2fe, #4facfe);
+  color: #0d0d0d;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+.btn-submit:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 148, 156, 0.233);
 }
