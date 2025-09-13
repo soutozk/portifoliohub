@@ -6,16 +6,21 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
 body {
   font-family: "Roboto", sans-serif;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #151515;
-  width: 100%;
+  flex-direction: column; /* empilha header, main e footer */
   min-height: 100vh;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  background-color: #151515;
+}
+main.container-home {
+  flex: 1; /* ocupa o espaço restante */
 }
 
 a {
