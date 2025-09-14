@@ -6,16 +6,22 @@ gsap.to("text", {
   fill: "white",
 });
 
+// Fade-out da intro
 setTimeout(function () {
   const startAnimation = document.querySelector(".start-animation");
   startAnimation.style.transition = "opacity 1s ease-out";
   startAnimation.style.opacity = 0;
-}, 3000); // Tempo igual à duração da animação do contorno
+}, 3000); // tempo da animação do texto
 
+// Só depois que a intro sumir, mostrar o conteúdo
 setTimeout(function () {
-  document.querySelector(".start-animation").style.display = "none"; // Esconde a animação
-  document.querySelector(".container-home").style.display = "flex";
-  document.querySelector("header").style.display = "flex"; // Reexibe o footer
+  const startAnimation = document.querySelector(".start-animation");
+  const containerHome = document.querySelector(".container-home");
+  const header = document.querySelector(".navbar");
 
-  document.querySelector(".container-home").style.opacity = 1;
-}, 3000);
+  startAnimation.style.display = "none";
+  containerHome.style.display = "flex";
+
+  containerHome.style.opacity = 1;
+  header.style.opacity = 1;
+}, 4000); // espera 1s extra pro fade-out terminar
